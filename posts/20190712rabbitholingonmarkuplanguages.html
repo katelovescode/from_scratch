@@ -13,43 +13,27 @@
     <!-- TODO: dynamically update the css version with version updates, or with a file hash, which only changes when the file changes -->
     <!-- https://stackoverflow.com/questions/3466989/what-does-appending-v-1-to-css-and-javascript-urls-in-link-and-script-tags-do -->
   </head>
+  <body><h2>Rabbit-Holing on Markup Langugages</div></h2>
 
-  <body>
-    <h1><a href="../index.html">from scratch</a></h1>
-    <div class="post">
-      <div class="post-title">Rabbit-Holing on Markup Langugages</div>
-      <!-- TODO: Auto-title-case? -->
-      <div class="post-date">July 12th, 2019</div>
-      <div class="post-content">
-        <p>
-          I spent a lot of time the other day rabbitholing on Markup Languages. I'm most familiar with Markdown but in the past when I've used it (in
-          Jekyll specifically) I always somehow end up writing raw html directly into the posts anyway. I'd really like a Markup Language that's
-          smarter. Also I don't want to reinvent the wheel on <b>everything</b> for this project, so it'd be great to find a Markup Language that
-          already has a parser ruby gem associated with it, given that I'm planning on writing this static site generator in ruby.
-        </p>
-        <p>I found redcarpet and installed the gem, and messed around a little in the console to see how it worked.</p>
-        <pre><code>
-          irb
-          
-          > require 'redcarpet'
-           => true 
+<h3>July 12th, 2019</h3>
 
-          > markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-           => #&#x3C;Redcarpet::Markdown:0x00007f9a50041d60 @renderer=#&#x3C;Redcarpet::Render::HTML:0x00007f9a500429b8 @options={:autolink=&#x3E;true, :tables=&#x3E;true}&#x3E;&#x3E; 
+<p>I spent a lot of time the other day rabbitholing on Markup Languages. I&#39;m most familiar with Markdown but in the past when I&#39;ve used it (in Jekyll specifically) I always somehow end up writing raw html directly into the posts anyway. I&#39;d really like a Markup Language that&#39;s smarter. Also I don&#39;t want to reinvent the wheel on <b>everything</b> for this project, so it&#39;d be great to find a Markup Language that already has a parser ruby gem associated with it, given that I&#39;m planning on writing this static site generator in ruby.</p>
 
-          > markdown.render(&#x22;## Header 2 Markdown&#x22;)
-           => &#x22;&#x3C;h2&#x3E;Header 2 Markdown&#x3C;/h2&#x3E;\n&#x22;
-          </code></pre>
-      </div>
-      <div class="post-footer">
-        <!-- TODO: This post was developed on [list PR here] -->
-        <!-- 
-        <div class="post-similar">
-          TODO: write a plugin that finds and matches similar posts
-        </div>
-        -->
-      </div>
-    </div>
-    <script src="js/scripts.js"></script>
+<p>I found redcarpet and installed the gem, and messed around a little in the console to see how it worked.</p></p>
+
+<p>```
+$ irb</p>
+
+<blockquote>
+<p>require &#39;redcarpet&#39;
+=&gt; true </p>
+
+<p>markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+=&gt; #<Redcarpet::Markdown:0x00007f9cc8888670 @renderer=#<Redcarpet::Render::HTML:0x00007f9cc88887b0 @options={}>&gt;</p>
+
+<p>markdown.render(&quot;## Header 2 Markdown&quot;)
+=&gt; &quot;<h2>Header 2 Markdown</h2>\n&quot;
+```</p>
+</blockquote>
   </body>
 </html>
