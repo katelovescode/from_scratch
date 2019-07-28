@@ -17,17 +17,27 @@
 
 <h3>July 12th, 2019</h3>
 
-<p>Given my post the other day about already being tired of writing posts in HTML, I decided the next step was to move to Markdown. I&#39;m going to start with the <a href="https://github.com/vmg/redcarpet">redcarpet</a> gem, and then iterate if it ends up forcing me to write a lot of raw html in my posts.  Basically my next steps are:
-* write a script to parse the Markdown into an HTML document, and save that document to the <code>posts</code> folder
-* I&#39;ve been using the same HTML <code>head</code> code on each page so I&#39;ll probably hardcode that into the script for now
-* manually add the new post to the homepage list of links</p>
+<p>Given my post the other day about already being tired of writing posts in HTML, I decided the next step was to move to Markdown. I&#39;m going to start with the <a href="https://github.com/vmg/redcarpet">redcarpet</a> gem, and then iterate if it ends up forcing me to write a lot of raw html in my posts.  Basically my next steps are:</p>
+
+<ul>
+<li>write a script to parse the Markdown into an HTML document, and save that document to the <code>posts</code> folder</li>
+<li>I&#39;ve been using the same HTML <code>head</code> code on each page so I&#39;ll probably hardcode that into the script for now</li>
+<li>manually add the new post to the homepage list of links</li>
+</ul>
 
 <p>There are definitely some improvements to be made on the next iteration but for <em>now</em> that will deploy the html doc to my site via netlify and it will be served and live.</p>
 
-<p>Workflow for writing posts going forward will be:
-* write markdown file (filename should be <code>YYYYMMDDtitle.md</code>)
-  * This should include a ## (h2) title and a ### (h3) date at the top
-* run script
-* merge to <code>master</code> branch (which autodeploys)</p>
+<p>Workflow for writing posts going forward will be:</p>
+
+<ul>
+<li>write markdown file (filename should be <code>YYYYMMDDtitle.md</code>)
+
+<ul>
+<li>This should include a ## (h2) title and a ### (h3) date at the top, just for consistency</li>
+</ul></li>
+<li>run script</li>
+<li>add link to new HTML file to the index page</li>
+<li>merge to <code>master</code> branch (which autodeploys)</li>
+</ul>
   </body>
 </html>

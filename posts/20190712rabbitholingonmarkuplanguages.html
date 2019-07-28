@@ -21,19 +21,15 @@
 
 <p>I found redcarpet and installed the gem, and messed around a little in the console to see how it worked.</p></p>
 
-<p>```
-$ irb</p>
+<pre><code class="ruby">    $ irb
+    &gt; require &#39;redcarpet&#39;
+    =&gt; true 
 
-<blockquote>
-<p>require &#39;redcarpet&#39;
-=&gt; true </p>
+    &gt; markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    =&gt; #&lt;Redcarpet::Markdown:0x00007f9cc8888670 @renderer=#&lt;Redcarpet::Render::HTML:0x00007f9cc88887b0 @options={}&gt;&gt;
 
-<p>markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-=&gt; #<Redcarpet::Markdown:0x00007f9cc8888670 @renderer=#<Redcarpet::Render::HTML:0x00007f9cc88887b0 @options={}>&gt;</p>
-
-<p>markdown.render(&quot;## Header 2 Markdown&quot;)
-=&gt; &quot;<h2>Header 2 Markdown</h2>\n&quot;
-```</p>
-</blockquote>
+    &gt; markdown.render(&quot;## Header 2 Markdown&quot;)
+    =&gt; &quot;&lt;h2&gt;Header 2 Markdown&lt;/h2&gt;\n&quot;
+</code></pre>
   </body>
 </html>
