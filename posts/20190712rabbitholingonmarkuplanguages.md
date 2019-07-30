@@ -5,12 +5,14 @@ I spent a lot of time the other day rabbitholing on Markup Languages. I'm most f
 
 I found redcarpet and installed the gem, and messed around a little in the console to see how it worked.</p>
 
-```ruby
+```
 $ irb
 > require 'redcarpet'
 => true 
+
 > markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
 => #<Redcarpet::Markdown:0x00007f9cc8888670 @renderer=#<Redcarpet::Render::HTML:0x00007f9cc88887b0 @options={}>>
+
 > markdown.render("## Header 2 Markdown")
 => "<h2>Header 2 Markdown</h2>\n"
 ```
