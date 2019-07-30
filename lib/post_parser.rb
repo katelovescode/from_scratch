@@ -1,6 +1,7 @@
 require 'redcarpet'
 
 posts_directory = "posts"
+build_directory = "_build"
 skeleton_directory = "skeleton"
 html_header = File.read("#{skeleton_directory}/html_header.html")
 html_footer = File.read("#{skeleton_directory}/html_footer.html")
@@ -16,7 +17,7 @@ if File.directory?(posts_directory)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     # save the html file in the posts directory here
     html = markdown.render(contents)
-    html_path = "#{posts_directory}/#{filename[0]}.html"
+    html_path = "#{build_directory}/#{filename[0]}.html"
     File.write(html_path, html_header + html + html_footer)
   end
 end
